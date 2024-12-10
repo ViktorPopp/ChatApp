@@ -18,14 +18,14 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ProfilesCubit>(
       create: (context) => ProfilesCubit(),
       child: MaterialApp(
-        title: 'Supabase Chat',
+        title: 'Awesome Chat!',
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         home: const SplashPage(),
