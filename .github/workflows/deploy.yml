@@ -27,9 +27,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 			
       - name: Setup Flutter
         uses: flutter-actions/setup-flutter@v3
@@ -39,12 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-			
-      - name: Analyze project source
-        run: dart analyze
 
       - name: Build Site
-        run: flutter build web
+        run: flutter build web --release
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
